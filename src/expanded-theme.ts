@@ -1,12 +1,13 @@
-import { Palette } from "@mui/material";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Palette, PaletteColor } from "@mui/material";
 
-declare module '@mui/material/styles' {
+declare module '@mui/material/styles/createPalette' {
     interface Palette {
-      custom: Palette['primary'];
+      tertiary: PaletteColor
     }
   
-    interface PaletteOptions {
-      custom?: PaletteOptions['primary'];
+    interface PaletteColor {
+      [key: number]: string;
     }
   }
   
